@@ -1,0 +1,39 @@
+.estiloYoTabla {
+  background-color: transparent;
+}
+
+.tableStyle {
+  width: 85%;
+  margin: auto; /* Centra la tabla horizontalmente */
+  border-spacing: 10px; /* Agrega separación entre las celdas */
+  border-collapse: collapse;
+}
+
+.tableStyle th, .tableStyle td {
+  border-bottom: 1px solid #dddddd; /* Borde inferior en todas las celdas */
+  padding: 8px;
+}
+
+.tableStyle th:first-child,
+.tableStyle td:first-child {
+  text-align: left; /* Alinea el texto a la izquierda en la primera columna */
+}
+
+#icoTicket{
+  filter: invert(100%);
+  width: 25px;
+  margin-right: 10px;
+}
+
+.tableStyle th:nth-child(2),
+.tableStyle td:nth-child(2),
+.tableStyle th:nth-child(3),
+.tableStyle td:nth-child(3) {
+  text-align: right; /* Alinea el texto a la derecha en las columnas de Precio y Cantidad */
+  padding-left: 0; /* Elimina el espacio a la izquierda en esas columnas */
+}
+
+.tableStyle th:not(:first-child),
+.tableStyle td:not(:first-child) {
+  padding-left: 10px; /* Añade un espacio a la izquierda en las demás columnas */
+}

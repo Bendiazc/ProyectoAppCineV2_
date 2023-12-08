@@ -1,0 +1,62 @@
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.8);
+  padding: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.contenedorModal{
+  width: 500px;
+  min-height: 100px;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  padding-bottom: 25px;
+}
+
+.encabezadoModal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black ;
+}
+
+.encabezadoModal >h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: blue
+}
+
+.botonCerrar{
+  position: absolute;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  top: 15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-radius: 5px;
+  color: #1766DC
+}
+
+.botonCerrar:hover{
+  background: #f2f2f2;
+}
+

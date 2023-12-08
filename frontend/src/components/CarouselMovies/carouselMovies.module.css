@@ -1,0 +1,82 @@
+.containerr {
+  border: 2px solid black;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 30px 0px; 
+}
+
+.desenfoque {
+  backdrop-filter: blur(190px);
+  padding: 50px;
+  padding-bottom: 50px;
+  height: 100%;
+  opacity: 2;
+}
+
+.centerImage {
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out; /* Puedes ajustar el tiempo (0.2s) según tus preferencias */ 
+}
+
+.centeredContent > img {
+  width: 300px;
+  margin-top: 30px;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: gordita,Helvetica,sans-serif;
+  padding:0px 20px;
+}
+
+.slider-item {
+  opacity: 0.7; /* Opacidad predeterminada para las imágenes */
+  transition: opacity 0.3s ease;
+}
+
+.centerImage {
+  opacity: 1; /* Opacidad para la imagen en el centro */
+  
+}
+
+.hovered-image {
+  opacity: 1; /* Opacidad para la imagen cuando el mouse está sobre ella */ 
+}
+
+.comprarTicket {
+  background-color: #e51937;
+  color: #fff;
+  height:46px;
+  width: 150px;
+  padding: 10px 10px; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-bottom: 16px;
+  border-radius: 23px;
+}
+
+.comprarTicket:hover {
+  background-color: #B7142C;
+}
+
+.duracion {
+  margin-bottom: 0px;
+}
+
+.fecha{
+  margin-top: 0px;
+}
+

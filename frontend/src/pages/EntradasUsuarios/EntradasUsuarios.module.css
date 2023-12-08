@@ -1,0 +1,23 @@
+.contentImages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: rgb(20 4 4);
+  box-shadow: inset 0px 2px 65px 46px rgba(0,0,0,0.7);
+  min-height: 90vh;
+}
+
+.contentImages > img{
+  border-radius: 20px;
+}bodyHere
+
+.bodyHere {
+  /* background-color: #2868ff; */
+  min-height: 100%; 
+  height: 100vh;
+  /* box-shadow: inset 0px 2px 65px 46px rgba(0,0,0,0.7); */
+}

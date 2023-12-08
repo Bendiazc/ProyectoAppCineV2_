@@ -1,0 +1,223 @@
+.bodyHere {
+  width: 100%;
+  /* background-color: #611621; */
+  background-color: #000b25;
+  height: 90vh;
+  padding: 20px;
+  box-shadow: inset 0px 2px 65px 46px rgba(0,0,0,0.7);
+}
+
+.espacioFunciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  align-self: flex-start;
+  margin-left: 60px;
+  position: relative;
+  top: 50px
+}
+
+.espacioFunciones > h4{
+  margin-top: 8px;
+  color:#0592D9 ;
+  font-weight: bold;
+}
+
+.contenedor {
+  width: 80%;
+  margin: 0% auto;
+  display: flex;
+  /* background-color: rgb(224, 224, 224); */
+  /* border-radius: 50px; */
+  padding: 10px;
+  column-gap: 15px;}
+
+.Progreso {
+  flex: 4;
+  height: 800px;
+  border: 1px solid white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.regresar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e51937;
+  border: none;
+  color: white; 
+  margin-bottom: 110px;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.volver {
+  background-color: #e51937;
+  color: #fff;
+  height:40px;
+  width: 220px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 35px;
+}
+
+.regresar:hover {
+  background-color: #B7142C;
+}
+
+
+.regresar>p{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  margin: 0px;
+  margin-left: 5px;
+}
+.regresar>img{
+  height: 20px;
+  margin: 0px;
+}
+
+
+.imagenProgreso{
+  width: 55px;
+}
+.salaCantidad {
+  flex: 23;
+  border: 1px solid white;
+  height: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(224, 224, 224); */
+  border-radius: 20px;
+
+}
+
+.TablaTitulo>h4{
+  color: #0592D9;
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+.arribatitulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.arribatitulo>h1{
+  color: #0592D9;
+  font-weight: bold;
+  margin: 0px;
+}
+.arribatitulo>h2{
+  font-weight: bold;
+  margin: 0px;
+  
+}
+
+.SectoresAll{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  row-gap: 100px;
+  padding-bottom: 40px;
+}
+
+.resumenCompra {
+  flex: 10;
+  border: 1px solid white;
+  height: 800px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px;
+  /* background-color: rgb(224, 224, 224); */
+  border-radius: 20px;
+
+}
+
+.modal {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.modal > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.botonComprarCancelar >button:first-child {
+  background-color: #e51937;
+  color: #fff;
+  height:40px;
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 35px;
+  margin-top: 8px;
+}
+
+.botonComprarCancelar >button:first-child:hover {
+  background-color: #B7142C;
+}
+
+.cancelar{
+  background: none;
+  color: #B7142C;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.espacioButacas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.espacioButacas > h1{
+  font-size: 35px;
+}
+
+.sectorResumen {
+  flex: 34.5;
+  height: 800px;
+  /* border: 1px solid white; */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuadroTicket{
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+}
+
