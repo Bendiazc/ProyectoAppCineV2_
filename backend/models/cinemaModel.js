@@ -8,9 +8,15 @@ const cinemaSchema = new mongoose.Schema({
     numSalas: { type: Number, required: true },
     arregloSalas: {type: Array, required: true },
     movies: [{
-      nameID: { type: String, required: true }, //el front retorna el id..lo que ingresa el usuario es el nombre especifico para ecnontrarlo en la API de peliculas
+      nameID: { type: String, required: true }, //el front retorna el id..
       funcion: { type: Number, required: true },
-      sala: { type: Number, required: true },
+      sala: { 
+        type: Number, 
+        required: true,
+        validate: {
+          validator: value => (value <= this.numSalas),
+          message: props => `La sala no puede ser mayor que el número total de salas (${props.value}).`
+      }},
   }],
 });
 

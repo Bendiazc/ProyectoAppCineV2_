@@ -1,62 +1,66 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './CantidadTickets.module.css'
+import EntradasContext, { EntradasProvider } from '../../context/entradasContext'
 
-const TipoTicket = [
-  {
-    person: "Adult",
-    price: 20,
-    num : 0
-  },
-  {
-    person: "Child 3-8",
-    price: 10,
-    num : 0
-  },
-  {
-    person: "Adult +60",
-    price: 10,
-    num : 0
-  },
-]
+// const TipoTicket = [
+//   {
+//     person: "Adult",
+//     price: 20,
+//     num : 0
+//   },
+//   {
+//     person: "Child 3-8",
+//     price: 10,
+//     num : 0
+//   },
+//   {
+//     person: "Adult +60",
+//     price: 10,
+//     num : 0
+//   },
+// ]
 
-const CantidadTickets = ({cancelCompra , cantidadTickets}) => {
+const CantidadTickets = ({cancelCompra}) => {
 
-  const [listaPersonas,setListaPersonas] = useState(TipoTicket)
+
+  const {infoCantidadTickets,handlecantidadTickets} = useContext(EntradasContext)
+
+  // const [listaPersonas,setListaPersonas] = useState(TipoTicket)
   // console.log(cancelCompra , "efsefseffsef");
 
   const handleAumentar = (idx) => {
-    const listaTem = [...listaPersonas]
+    const listaTem = [...infoCantidadTickets]
     listaTem[idx].num += 1
     // console.log(listaTem[idx].num);
-    setListaPersonas(listaTem)
+    handlecantidadTickets(listaTem)
   }
   const handleReducir = (idx) => {
-    const listaTem = [...listaPersonas]
+    const listaTem = [...infoCantidadTickets]
     if (listaTem[idx].num>0) listaTem[idx].num -= 1
     // console.log(listaTem[idx].num);
-    setListaPersonas(listaTem)
+    handlecantidadTickets(listaTem)
   }
 
- useEffect(() => {
-  cancelCompra != null &&
-  setListaPersonas([
-    {
-      person: "Adult",
-      price: 20,
-      num : 0
-    },
-    {
-      person: "Child 3-8",
-      price: 10,
-      num : 0
-    },
-    {
-      person: "Adult +60",
-      price: 10,
-      num : 0
-    },
-  ])
- }, [cancelCompra])
+//  useEffect(() => {
+//   cancelCompra != null &&
+//   handlecantidadTickets([
+//     {
+//       person: "Adult",
+//       price: 20,
+//       num : 5
+//     },
+//     {
+//       person: "Child 3-8",
+//       price: 10,
+//       num : 0
+//     },
+//     {
+//       person: "Adult +60",
+//       price: 10,
+//       num : 0
+//     },
+//   ])
+//  }, [cancelCompra])
  
   //Mas Elegante
   // const handleAumentar = (idx) => {
@@ -75,9 +79,14 @@ const CantidadTickets = ({cancelCompra , cantidadTickets}) => {
   //   });
   // };
   
-  useEffect(() => {
-    cantidadTickets(listaPersonas)
-  }, [listaPersonas])
+  // useEffect(() => {
+  //   handlecantidadTickets(listaPersonas)
+  //   console.log(listaPersonas);
+  // }, [listaPersonas])
+
+  // useEffect(() => {
+  //   cantidadTickets(listaPersonas)
+  // }, [])
   
   // console.log(listaPersonas);
   return (
@@ -92,7 +101,7 @@ const CantidadTickets = ({cancelCompra , cantidadTickets}) => {
                 </tr>
               </thead>
               <tbody>
-                {listaPersonas.map((item, idx) => (
+                {infoCantidadTickets.map((item, idx) => (
                   <tr key={idx + 'id'}>
                     <td><img src="/ticket.svg" id = {styles.icoTicket}></img>{item.person}</td>
                     <td>{item.price}</td>

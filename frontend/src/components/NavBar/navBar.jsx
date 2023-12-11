@@ -13,6 +13,7 @@ const NavBar = ({objetoDatos} ) => {
   useEffect(() => {
     let isLogged = localStorage.getItem("isLogged")
     let user = localStorage.getItem("name")
+    let typeUser = localStorage.getItem("")
 
     // console.log(isLogged);
     setYesNoSelected(isLogged)

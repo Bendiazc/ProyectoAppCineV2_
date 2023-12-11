@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -9,6 +9,8 @@ import {formatoHoraFunction} from '../../funcionesJS/formatoHoraFuncion.js'
 import styles from './RadioFunction.module.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { pink, yellow } from '@mui/material/colors';
+import EntradasContext from '../../context/entradasContext.jsx';
+
 
 const { palette } = createTheme();
 const theme = createTheme({
@@ -66,7 +68,10 @@ const Funciones = [
     { Sala: 1, Hora: 1100 }
   ]
 ]
-const RadioFunction = ({ indiceMovie, salaFuncionMovie }) => {
+const RadioFunction = ({ indiceMovie }) => {
+
+  const {infoDeRadioButtons,handleInfoRadioButtons} = useContext(EntradasContext)
+
   const [selectedFunction, setSelectedFunction] = useState({
     checked: null,
     sala: null,
@@ -76,7 +81,7 @@ const RadioFunction = ({ indiceMovie, salaFuncionMovie }) => {
 
   const handleChange = ({ target }) => {
     setSelectedFunction({ checked: target.value, sala: target.name });
-    salaFuncionMovie({ checked: target.value, sala: target.name });
+    handleInfoRadioButtons({ checked: target.value, sala: target.name });
     // console.log(target.value, target.name);
   };
 
@@ -113,6 +118,7 @@ const RadioFunction = ({ indiceMovie, salaFuncionMovie }) => {
                     styles={{root: styles.radio, checked: styles.checked}}
                   />
                 }
+                checked={infoDeRadioButtons && (infoDeRadioButtons.sala == val.Sala && infoDeRadioButtons.checked==val.Hora) ? true : false}
                 onChange={handleChange}
                 label={formatoHoraFunction(val.Hora)}
               />

@@ -1,0 +1,94 @@
+.carritoProductos{
+  width: 340px;
+  /* height: 48%; */
+  height: 100px;
+  /* border: white solid 1px; */
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #004a8c;
+}
+
+/*==============*/
+.ImagenTarjetaResumen{
+  height: 100%;
+  flex:1;
+  /* border: #B7142C solid 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImagenTarjetaResumen > img {
+  height: 82%;
+  /* border: 1px solid black; */
+}
+
+.CategoryName{
+  flex: 2;
+  /* border: #B7142C solid 1px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+}
+
+.CategoryName>p{
+  margin: 0px;
+}
+.CategoryName>p:first-child{
+  font-weight: bold;
+}
+.CategoryName>p:last-child{
+  font-size: 14px;
+}
+
+.seccionBotones{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+}
+.pSecBotones{
+  margin: 0px;
+  font-size: 18px;
+}
+
+.BtnSec{
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  color: #e51937;
+  border: 1px solid #e51937;
+  border-radius: 20%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.vcontinuar2:hover {
+  background-color: #e51937;
+  color: white;
+  transition: .4s;
+}
+
+.PrecioEdit{
+  display: flex;
+  flex: 2;
+  /* border: #B7142C solid 1px; */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 8px;
+  row-gap: 10px;
+}
+.PrecioEdit>h4{
+  margin: 0px;
+  font-size: 18px;
+  font-weight: bold;
+}

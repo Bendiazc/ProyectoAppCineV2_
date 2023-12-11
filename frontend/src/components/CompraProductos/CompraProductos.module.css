@@ -1,0 +1,89 @@
+.CompraProductos{
+  width: 100%;
+  height: 680px;
+  /* outline: 1px solid white; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+
+}
+.navCompraProductos{
+  /* border: 1px solid white; */
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+  background-color: #000B1A;
+  flex: 1;
+  padding: 0px;
+  padding-left: 10px;
+}
+
+.lugarProductos{
+  background-color: #000B1A;
+  border-radius: 15px;
+  flex: 8;
+  display: flex;
+  column-gap: 20px;
+  row-gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 40px;
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+}
+/*=====================================================*/
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.navitem {
+  padding: 10px 15px 3px 0px;
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  font-weight: bold;
+
+}
+
+.navitem::after {
+  content: '';
+  position: absolute;
+  width: 30%; /* Ancho inicial pequeño */
+  height: 2px;
+  bottom: 0;
+  left: 0; /* Comienza desde la izquierda */
+  background-color: #00B1FF;
+  transition: width 0.3s ease-in-out;
+}
+
+.navitem:hover::after {
+  width: 100%;
+}
+
+.navitem.selected::after {
+  width: 100%;
+}
+
+/*=====================================================*/
+
+
+.lugarProductos::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+.lugarProductos::-webkit-scrollbar-thumb {
+  background-color: #1e1e1e; /* Color del "pulgón" de la barra de desplazamiento */
+  border-radius: 6px; /* Radio de las esquinas del "pulgón" */
+}
+
+.lugarProductos::-webkit-scrollbar-track {
+  background-color: #404040; /* Color del fondo de la barra de desplazamiento */
+}

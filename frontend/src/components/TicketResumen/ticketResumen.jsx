@@ -9,8 +9,13 @@ import {formatoHoraFunction} from '../../funcionesJS/formatoHoraFuncion.js'
 import {formatDate} from '../../funcionesJS/formatoFecha.js'
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { useContext } from 'react';
+import ButacasContext from '../../context/butacasContext.jsx';
+import { Modal } from '@mui/material';
 
-const TicketResumen = ({imagenTemp,objetoDatos}) => {
+const TicketResumen = ({objetoDatos}) => {
+
+  const {imagenTemp} = useContext(ButacasContext)
 
   const [datosTodo , setDatosTodo] = useState({})
   const [imgBase64, setImgBase64] = useState(null)
@@ -142,6 +147,8 @@ const TicketResumen = ({imagenTemp,objetoDatos}) => {
           <p>Confirme los datos ingresados para efectuar la compra</p>
         </div>
 
+
+
         <div id = "SectorResumen" className={styles.SectorResumen}>
           <img src={datosTodo && datosTodo.movieImg}  alt = "Imagen Pelicula"></img>
           <div className={styles.centroInfo}>
@@ -185,8 +192,9 @@ const TicketResumen = ({imagenTemp,objetoDatos}) => {
           <div className={styles.spaceButacas}>
             <h3>Distribucion de Butacas</h3>
           {imagen && <img src={imagen} alt="fbefb" />}
-          </div>
+          </div>         
         </div>
+
         <div className={styles.SectorBotonTotal}>
           <p>¡Tu comprobante de compra se descarga en formato PDF después de completar tu pedido!</p>
           <div className={styles.SectorTotal}>

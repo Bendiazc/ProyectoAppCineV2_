@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import Butaca from '../Butaca/Butaca.jsx';
 import styles from './ButacasSala.module.css';
 import html2canvas from 'html2canvas';
@@ -7,6 +7,8 @@ import axios from 'axios'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import EntradasContext from '../../context/entradasContext.jsx';
+import ButacasContext from '../../context/butacasContext.jsx';
 
 //  const sala1 = [[11,11,11,11],[12,12,12,12],[11,11,11,11]]
 //  const sala2 = [[10,10,10],[12,12,12,12],[10,10,10,10,10]]
@@ -44,16 +46,36 @@ function numeroALetra(numero) {
   return letra;
 }
 
+//infoDeRadioButtons,handleInfoRadioButtons
+//infoDeRadioButtons.sala
+//infoDeRadioButtons.checked
 
-const ButacasSala = ({setListaSeleccionadas,vsala,numeroTotalTickets,vhora,setImagenTemp,vidMovie}) => {
+// vsala={infoDeRadioButtons.sala}                           
+// setListaSeleccionadas = {setListaSeleccionadas}
+// vhora = {infoDeRadioButtons.checked}
 
+const ButacasSala = ({vidMovie}) => {
+
+  const {listaSeleccionadas,setListaSeleccionadas,setImagenTemp} = useContext(ButacasContext)
+  
+  const {infoCantidadTickets,infoDeRadioButtons} = useContext(EntradasContext) || {}
+
+  const calcularTotalNum= () => {
+    return infoCantidadTickets.reduce((total, person) => total + person.num, 0) 
+  }
+
+  useEffect(() => {
+    infoCantidadTickets&&
+    setCantidadTickets(calcularTotalNum())
+  }, [infoCantidadTickets])
+  
   
   //DATOS QUE DEPENDEN DEL MAPEO Y SELECCION DE BUTACAS
   const [butacasReserved , setButacasReserved] = useState([]) //pintar y no permitir seleccionar
 
   const getSeatsReserved = async () => {
     try {
-        let responseSeats = await axios.get("http://localhost:8050/api/ticket/getSeatsReserved/"+vidMovie+"/"+vsala+"/"+vhora+"/"+formatDate(new Date()))
+        let responseSeats = await axios.get("http://localhost:8050/api/ticket/getSeatsReserved/"+vidMovie+"/"+infoDeRadioButtons.sala+"/"+infoDeRadioButtons.checked+"/"+formatDate(new Date()))
         const butacasReservadas = responseSeats.data
         // console.log(MapeoParaButacasReserved(butacasReservadas));
         setButacasReserved(MapeoParaButacasReserved(butacasReservadas))
@@ -65,7 +87,7 @@ const ButacasSala = ({setListaSeleccionadas,vsala,numeroTotalTickets,vhora,setIm
 
   useEffect(() => {
     getSeatsReserved();
-  }, [vidMovie,vsala,vhora]);
+  }, [vidMovie,infoDeRadioButtons.sala,infoDeRadioButtons.checked]);
 
   const MapeoParaButacasReserved = (data) => {
     return data.map(seats => 
@@ -74,16 +96,16 @@ const ButacasSala = ({setListaSeleccionadas,vsala,numeroTotalTickets,vhora,setIm
 
 
   const [cantidadTickets , setCantidadTickets] = useState(0)
-  const [butacasSeleccionadas, setButacasSeleccionadas] = useState([]);
+  // const [butacasSeleccionadas, setButacasSeleccionadas] = useState([]);
   const listaSalida = butacasReserved.flat();
   const [salasLista, setSalasLista] = useState(salas)
   const [salaElegida, setSalaElegida] = useState([])
   // console.log(listaSalida);
 
   useEffect(() => {
-    cantidadTickets == butacasSeleccionadas.length &&
+    cantidadTickets == listaSeleccionadas.length &&
     CapturarImagen()
-  }, [butacasSeleccionadas])
+  }, [listaSeleccionadas])
 
   //=====Para capturar la imagen======//
 
@@ -116,14 +138,14 @@ const ButacasSala = ({setListaSeleccionadas,vsala,numeroTotalTickets,vhora,setIm
 
   //=================================//
 
-  useEffect(() => {
-    // console.log(numeroTotalTickets+"OUUUUUUUU");
-    setCantidadTickets(numeroTotalTickets)
-  }, [numeroTotalTickets])
+  // useEffect(() => {
+  //   // console.log(numeroTotalTickets+"OUUUUUUUU");
+  //   setCantidadTickets(numeroTotalTickets)
+  // }, [numeroTotalTickets])
   
-  useEffect(() => {
-    setListaSeleccionadas(butacasSeleccionadas)
-  }, [butacasSeleccionadas])
+  // useEffect(() => {
+  //   setListaSeleccionadas(butacasSeleccionadas)
+  // }, [butacasSeleccionadas])
   
   // useEffect(()=> {
   //   setListaSeleccionadas([])
@@ -131,8 +153,8 @@ const ButacasSala = ({setListaSeleccionadas,vsala,numeroTotalTickets,vhora,setIm
 
   useEffect(() => {
     // console.log(vsala+"Efwef11111111111111"+vhora+"Efwef");
-    setSalaElegida(salasLista[vsala-1])
-  }, [vsala])
+    setSalaElegida(salasLista[infoDeRadioButtons.sala-1])
+  }, [infoDeRadioButtons.sala])
   
 
   const calculoNumColumnas = (sala) => {
@@ -181,12 +203,12 @@ const ButacasSala = ({setListaSeleccionadas,vsala,numeroTotalTickets,vhora,setIm
 
   const handleSeleccion = (asiento) => {
     // Verificar si la butaca ya está en la lista de seleccionadas
-    if (butacasSeleccionadas.includes(asiento)) {
+    if (listaSeleccionadas.includes(asiento)) {
       // Si está, la deseleccionamos eliminándola de la lista
-      setButacasSeleccionadas((prev) => prev.filter((butaca) => butaca !== asiento));
+      setListaSeleccionadas((prev) => prev.filter((butaca) => butaca !== asiento));
     } else {
       // Si no está, la seleccionamos agregándola a la lista
-      setButacasSeleccionadas((prev) => [...prev, asiento]);
+      setListaSeleccionadas((prev) => [...prev, asiento]);
     }
   };
 
@@ -229,10 +251,9 @@ const ButacasSala = ({setListaSeleccionadas,vsala,numeroTotalTickets,vhora,setIm
                           Array.from({length: column}).map((butaca,idxFila) => (
                             <Butaca
                               key={idxFila} 
-                              asiento={{ fila: numeroALetra(idxFila+1), columna: numColumna(salaElegida, idxSeccion, idxColum) }}
+                              asiento={{ fila: numeroALetra(idxFila+1),        columna: numColumna(salaElegida, idxSeccion, idxColum) }}
                               asientosLlenos = {listaSalida}
                               onSeleccion={handleSeleccion}
-                              butacasSeleccionadas={butacasSeleccionadas}
                               cantidadTickets={cantidadTickets}
                             />
                           ))

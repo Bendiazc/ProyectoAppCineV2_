@@ -1,0 +1,213 @@
+{
+  "combos": [
+    {
+      "type": "Combos",
+      "name": "Combo 2 Dulce OL CC",
+      "description": "1 Canchita Gigante(Dulce) + 2 Bebidas(32oz). *Sabor bebida sujeto a stock/canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1246?allowPlaceHolder=true",
+      "precio": 47
+    },
+    {
+      "type": "Combos",
+      "name": "Combo 2 Salado OL CC",
+      "description": "Canchita Gigante Salada + 2 Bebidas (32oz). *Sabor bebida sujeto a stock/canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1244?allowPlaceHolder=true",
+      "precio": 43
+    },
+    {
+      "type": "Combos",
+      "name": "Combo 2 Mix OL C",
+      "description": "1 Canchita Gigante (Mix) + 2 Bebidas (32oz). *Sabor bebida sujeto a stock / canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1247?allowPlaceHolder=true",
+      "precio": 47
+    },
+    {
+      "type": "Combos",
+      "name": "Com.2 Salado Dob.Gig. OL",
+      "description": "2 Canchita Gigante Salada + 2 Bebidas Grandes (32oz) *Sabor bebida sujeto a stock / canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2278?allowPlaceHolder=true",
+      "precio": 54
+    },
+    {
+      "type": "Combos",
+      "name": "Com.2 Mix Dob.Gig. OL",
+      "description": "¡Exclusivo para ti! 2 Canchita Gigante + 2 Bebidas Grandes (32oz) a un precio especial / Canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2276?allowPlaceHolder=true",
+      "precio": 58
+    },
+    {
+      "type": "Combos",
+      "name": "Com.2 Dulce Dob.Gig. OL",
+      "description": "2 Canchita Gigante (Dulce) + 2 Bebidas Grandes (32oz) . *Sabor bebida sujeto a stock / canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2274?allowPlaceHolder=true",
+      "precio": 58
+    },
+    {
+      "type": "Combos",
+      "name": "Combo 1 OL CC",
+      "description": "Canchita Grande(Salada) + 1 Bebida (32oz).*Sabor gaseosa sujeto a stock del cine",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1243?allowPlaceHolder=true",
+      "precio": 26.50
+    },
+    {
+      "type": "Combos",
+      "name": "Combo 1 OL CC Dulce",
+      "description": "Canchita Grande(Dulce) + 1 Bebida (32oz).*Sabor gaseosa sujeto a stock del cine",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1484?allowPlaceHolder=true",
+      "precio": 29.50
+    },
+    {
+      "type": "Combos",
+      "name": "Combo de Película OL CC",
+      "description": "1 Canchita Grande (Salada) + 2 Bebidas Medianas (21 oz). *Sabor gaseosa sujeto a stock del cine",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1245?allowPlaceHolder=true",
+      "precio": 31.50
+    },
+    {
+      "type": "Combos",
+      "name": "Combo de Película OL CC Dulce",
+      "description": "1 Canchita Grande (Dulce) + 2 Bebidas Medianas (21 oz). *Sabor gaseosa sujeto a stock del cine",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1485?allowPlaceHolder=true",
+      "precio": 34.50
+    },
+    {
+      "type": "Combos",
+      "name": "COMBO 1 SALADO OL",
+      "description": "Canchita Grande(Salada) + 1 Bebida (32oz).*Sabor gaseosa sujeto a stock del cine + 1 Hot dog",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2720?allowPlaceHolder=true",
+      "precio": 34.50
+    },
+    {
+      "type": "Combos",
+      "name": "COMBO 1 DULCE OL",
+      "description": "Canchita Grande(Dulce) + 1 Bebida (32oz).*Sabor gaseosa sujeto a stock del cine + 1 Hot dog",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2721?allowPlaceHolder=true",
+      "precio": 37.50
+    },
+    {
+      "type": "Combos",
+      "name": "Combo Familiar Salado OL",
+      "description": "Canchita Gigante Salada + 4 Bebidas (32oz). *Sabor bebida sujeto a stock / canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2622?allowPlaceHolder=true",
+      "precio": 59
+    },
+    {
+      "type": "Combos",
+      "name": "Combo Familiar Dulce OL",
+      "description": "2 Canchita Gigante (Dulce) + 2 Bebidas Grandes (32oz) . *Sabor bebida sujeto a stock / canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2623?allowPlaceHolder=true",
+      "precio": 63
+    },
+    {
+      "type": "Combos",
+      "name": "Combo Familiar Mix OL",
+      "description": "Canchita Gigante Mix + 4 Bebidas (32oz). *Sabor bebida sujeto a stock / canchita sin refill",
+      "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2624?allowPlaceHolder=true",
+      "precio": 63
+    }
+  ],
+  "canchita" : [
+    {
+        "type": "Canchita",
+        "name": "Canchita Gigante Mix",
+        "description": "La mejor opción para compartir en pareja. *Canchita sin refill",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/573?allowPlaceHolder=true",
+        "precio": 31.50
+    },
+    {
+        "type": "Canchita",
+        "name": "Canchita Gigante Dulce",
+        "description": "La mejor opción para compartir en pareja. *Canchita sin refill",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/587?allowPlaceHolder=true",
+        "precio": 31.50
+    },
+    {
+        "type": "Canchita",
+        "name": "Canchita Gigante",
+        "description": "La mejor opción para compartir en pareja. *Canchita sin refill",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/172?allowPlaceHolder=true",
+        "precio": 27.50
+    },
+    {
+        "type": "Canchita",
+        "name": "Canchita Mediana Dulce",
+        "description": "Endulzate probando nuestra canchita dulce ¡Disfrútala!",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/589?allowPlaceHolder=true",
+        "precio": 18.50
+    },
+    {
+        "type": "Canchita",
+        "name": "Canchita Mediana",
+        "description": "Para calmar tu antojo de Canchita (salada)",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/175?allowPlaceHolder=true",
+        "precio": 16.50
+    },
+    {
+        "type": "Canchita",
+        "name": "Canchita Grande",
+        "description": "¡La cantidad ideal, solo para ti! (salada)",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/171?allowPlaceHolder=true",
+        "precio": 18.50
+    },
+    {
+        "type": "Canchita",
+        "name": "Canchita Grande Dulce",
+        "description": "¡La cantidad ideal, solo para ti! (dulce)",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/588?allowPlaceHolder=true",
+        "precio": 21.50
+    }
+  ],
+  "bebidas" : [
+    {
+        "type": "Bebidas",
+        "name": "CCBebida Grande OL",
+        "description": "Refréscate con 32 oz de tu bebida favorita *Sabor gaseosa sujeto a stock del cine.",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1230?allowPlaceHolder=true",
+        "precio": 16.50
+    },
+    {
+        "type": "Bebidas",
+        "name": "CCBebida Mediana OL",
+        "description": "21 oz de puro y refrescante sabor *Sabor gaseosa sujeto a stock del cine.",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/1221?allowPlaceHolder=true",
+        "precio": 14.50
+    },
+    {
+        "type": "Bebidas",
+        "name": "Agua San Luis sin gas",
+        "description": "Refrescante agua sin gas",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/990?allowPlaceHolder=true",
+        "precio": 5
+    }
+  ],
+  "otros" : [
+    {
+        "type": "Otros",
+        "name": "Hot Dog Jumbo",
+        "description": "Disfrútalo con papitas al hilo y las salsas que prefieras",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/179?allowPlaceHolder=true",
+        "precio": 13.50
+    },
+    {
+        "type": "Otros",
+        "name": "Nachos con queso cheddar",
+        "description": "Crujientes nachos con deliciosa salsa de queso caliente",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/818?allowPlaceHolder=true",
+        "precio": 13.50
+    },
+    {
+        "type": "Otros",
+        "name": "Chocolate Biscolata Duo Max",
+        "description": "Exquisito chocolate con doble capa de sabor. ¡Una deliciosa experiencia dual en cada bocado!",
+        "url":"https://plazavea.vteximg.com.br/arquivos/ids/7022445-450-450/20257296.jpg?v=637810911260700000",
+        "precio": 7.50
+    },
+    {
+        "type": "Otros",
+        "name": "Chocolate Biscolata Mood 40gr",
+        "description": "Disfruta de momentos deliciosos con nuestro Chocolate Biscolata Mood 40gr.",
+        "url":"https://cdn.apis.cineplanet.com.pe/CDN/media/entity/get/ItemGraphic/2337?allowPlaceHolder=true",
+        "precio": 7.50
+    }
+  ]
+}

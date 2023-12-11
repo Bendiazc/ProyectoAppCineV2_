@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     enum: ["client", "admin"],
-    default: "client" // Aquí defines las opciones permitidas
+    default: "client" 
   }
 },{
     timestamps: true

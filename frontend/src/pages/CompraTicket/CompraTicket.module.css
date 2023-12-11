@@ -25,24 +25,25 @@
 }
 
 .contenedor {
-  width: 80%;
   margin: 0% auto;
   display: flex;
   /* background-color: rgb(224, 224, 224); */
   /* border-radius: 50px; */
   padding: 10px;
-  column-gap: 15px;}
+  column-gap: 15px;
+}
 
 .Progreso {
   flex: 4;
   height: 800px;
-  border: 1px solid white;
+  /* border-right: 1px solid white; */
   border-radius: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   padding: 20px 0px;
+  background-color: #091228;
 }
 
 .regresar{
@@ -55,6 +56,7 @@
   margin-bottom: 110px;
   width: 120px;
   border-radius: 10px;
+  transition: .4s;
 }
 
 .volver {
@@ -93,14 +95,15 @@
   width: 55px;
 }
 .salaCantidad {
-  flex: 23;
-  border: 1px solid white;
+  flex: 24;
+  /* border-right: 1px solid white; */
   height: 800px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   /* background-color: rgb(224, 224, 224); */
   border-radius: 20px;
+  background-color: #091228;
 
 }
 
@@ -138,8 +141,8 @@
 }
 
 .resumenCompra {
-  flex: 10;
-  border: 1px solid white;
+  flex: 14;
+  /* border: 1px solid white; */
   height: 800px; 
   display: flex;
   flex-direction: column;
@@ -148,6 +151,7 @@
   padding: 20px 0px;
   /* background-color: rgb(224, 224, 224); */
   border-radius: 20px;
+  background-color: #091228;
 
 }
 
@@ -165,6 +169,21 @@
   width: 80%;
   display: flex;
   justify-content: space-around;
+}
+
+.modal2{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+.modal2>h2{
+  color: #e51937  ;
+  font-weight: bold;
 }
 
 .botonComprarCancelar >button:first-child {
@@ -199,20 +218,35 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top:8px;
 }
 
 .espacioButacas > h1{
   font-size: 35px;
 }
 
-.sectorResumen {
-  flex: 34.5;
+.sectorPago {
+  flex: 22;
   height: 800px;
   /* border: 1px solid white; */
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #091228;
+  padding: 20px;
+}
+
+.sectorPago>p{
+  margin: 0px;
+  margin-bottom: 25px;
+  color: #a7a7a7;
+}
+.sectorPago>h1{
+  margin: 0px;
+  font-weight: bold;
+  color: #0963F9
 }
 
 .cuadroTicket{
@@ -220,4 +254,62 @@
   width: 100%;
   height: 100%;
 }
+
+.CompraProductos{
+  width: 100%;
+  height: 650px;
+  /* outline: 1px solid white; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+
+}
+.navCompraProductos{
+  border: 1px solid #B7142C ;
+  flex: 1;
+}
+
+.lugarProductos{
+  border: 1px solid #2714b7 ;
+  flex: 8;
+}
+
+.botonComprar{
+  background-color: #e51937;
+  color: #fff;
+  height:40px;
+  width: 300px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.botonComprar:hover {
+  background-color: #B7142C;
+}
+
+.pagoPaypal{
+  border: #fff solid 1px;
+  width: 50%;
+  height: 50%;
+}
+
+.imagenPeli{
+  height: 35%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sectorPago>p:last-child{
+  margin: 0px;
+  margin-top: 10px;
+  font-size: 15px;
+} 
 

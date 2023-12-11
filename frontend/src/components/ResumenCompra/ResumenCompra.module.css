@@ -12,7 +12,6 @@
 }
 
 .resumenCompra {
-  flex: 2;
   width: 100%;
   height: 100%; 
   display: flex;
@@ -26,22 +25,46 @@
   margin-bottom: 12px;
   margin-top: 4px;
 }
-.resumenCompra > img {
-  width: 38%;
+.contenedorImagenResumen{
+  /* outline: 1px solid white; */
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  column-gap: 6px;
+  height: 60%;
+  padding-top: 20px;
 }
 
+/* .contenedorResumen{
+  border: 1px solid white;
+  height: 100%;
+} */
+
+.contenedorImagenResumen > img {
+  width: 38%;
+  align-self: center;
+}
 .resumenCompra >div {
   /* align-self: flex-start; */
-  width: 80%;
+  width: 88%;
 }
 
 .titlesResumen ,.valoresResumen {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .valoresResumen {
   color: gray;
+  /* outline: solid 1px white; */
+}
+
+.valoresResumenButacas {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  /* outline: solid 1px white; */
+  padding: 0px 20px;
 }
 
 .titlesResumen {
@@ -93,6 +116,10 @@
   cursor: pointer;
   margin-top: 10px;
 }
+.cantidadEntrada {
+  padding-left: 35% ;
+  margin-top: 6px;
+}
 
 .cantidadEntrada > p{
   margin: 0px;
@@ -104,7 +131,11 @@
 }
 .totalContinuar {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
 .resumenTexto > .totalContinuar {
   position: absolute;
   bottom: 0px;
@@ -115,6 +146,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /* border: #B7142C solid 1px; */
+  align-self: center;
 }
 
 .espacioListaButacas > p{
@@ -125,3 +158,37 @@
   margin-top: 5px;
   margin-bottom: 7px;
 }
+
+.espacioProductoss{
+  width: 100%;
+  margin-top: 15px;
+  height: 230px;
+  background-color: #000B1A;
+  border-radius: 10px;
+  padding: 10px;
+  
+
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+/*=====================================================*/
+
+.espacioProductoss::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+.espacioProductoss::-webkit-scrollbar-thumb {
+  background-color: #1e1e1e; /* Color del "pulgón" de la barra de desplazamiento */
+  border-radius: 6px; /* Radio de las esquinas del "pulgón" */
+}
+
+.espacioProductoss::-webkit-scrollbar-track {
+  background-color: #404040; /* Color del fondo de la barra de desplazamiento */
+}
+
